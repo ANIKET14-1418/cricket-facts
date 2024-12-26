@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cricket Facts</h1>
+        <button id="generateFact">Generate Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const cricketFacts = [
+            "Cricket is one of the oldest team sports, with the first recorded international match played between the USA and Canada in 1844.",
+            "The longest cricket match in history was played between England and South Africa in 1939. It lasted for 12 days and ended in a draw because the English team had to catch their boat home!",
+            "The Ashes is one of the most famous cricket series, played between England and Australia. The name originated from a satirical obituary published in a British newspaper in 1882, after Australia defeated England at The Oval.",
+            "Indian cricketer Sachin Tendulkar holds the record for the most runs in both Test and One Day International (ODI) cricket. He also has the most centuries in both formats.",
+            "Cricket and baseball share some similarities, but cricket is actually older. The first recorded game of cricket was played in the 16th century, while baseball was developed in the 18th century.",
+            "In rain-affected matches, the Duckworth-Lewis method is used to calculate the target score. It’s a complex mathematical formula that often confuses fans and players alike.",
+            "The Cricket World Cup is one of the most-watched sporting events globally. The 2019 World Cup final between England and New Zealand was decided by a boundary count after a tie in both the match and the Super Over.",
+            "Cricket has some unique ways of getting out, such as 'hit wicket,' where the batsman accidentally hits the stumps with their bat or body, and 'handled the ball,' which is now considered 'obstructing the field.'",
+            "Unlike many other sports, cricket places a strong emphasis on sportsmanship and fair play, often referred to as 'the spirit of cricket.'",
+            "In 2007, a cricket bat and ball were taken aboard the International Space Station by astronaut Sunita Williams, making cricket a sport that has been played in space!"
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * cricketFacts.length);
+            document.getElementById('factDisplay').innerText = cricketFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
